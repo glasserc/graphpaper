@@ -1,0 +1,17 @@
+More sophisticated dependencies/conflictions? Boolean expressions, instead of
+lists of "all these"?
+
+Dependency resolver?
+
+Some kind of representation of causality? i.e. this switch triggers this square to change from "present" to "not present".
+
+Pages? (I think this will probably be implemented using a (page, place, propname) addressing in the graphpaper, and a notebook of pages of GraphPaperViews in the main function.)
+
+Undo/redo (keep track of the lists of operations that you perform; each list is an undo/redo command, just be prepared to reverse it).
+
+Signals which need to be emitted:
+- motion over property
+- dragging?
+
+Some kind of "adjacent" mode for connection properties?
+- drawings are done separately. Reliance on additional properties? (For instance, in some fields, "one_way" needs the presence of a wall. In other fields, maybe the wall isn't necessary or clutters up the screen?)

@@ -1,0 +1,23 @@
+This is a first draft of a "digital graph paper program". It depends
+on pygoocanvas and therefore goocanvas, which has just hit Debian
+unstable, but isn't guaranteed to be available on your distro of
+choice.
+
+lines-manual.py demonstrates an alternate approach, which is to
+manually place graph-paper lines with goocanvas.CanvasLines. I kind of
+like the approach better because it means we can read click events on
+the line, but the resize behavior is better on the current approach
+(draw 'pretend' lines by intercepting an expose event signal and
+grabbing a cairo context).
+
+Lines are drawn every 20 units (adjustable by SPACE variable, but
+probably using zoom would be better if you wanted to change
+that). Since pixels are located at 0.5 units offset from the main
+grid, we have to decide where to draw the graph paper lines. If you
+choose to draw them at -0.5 (and therefore 19.5), which makes each
+line bind to the square to its left (or top). If you choose to draw
+them at +0.5 (and therefore 20.5), then each line binds to the square
+on its right (or bottom). (In this context, "bind" means "is drawn in
+the area of".) For this application it doesn't matter much, since
+clicking on or near lines is intended to select the line, not a
+square.
