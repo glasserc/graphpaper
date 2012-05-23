@@ -67,7 +67,7 @@ class GraphPaperView(goocanvas.Canvas):
         root_item.connect("button_release_event", self.on_root_button_release)
         root_item.connect("motion_notify_event", self.on_root_motion_notify)
 
-        self.connect('expose-event', self.on_expose_event)
+        self.connect_after('expose-event', self.on_expose_event)
         self.props_drawn = {}
 
         self.squares_connections = {}
