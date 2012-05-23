@@ -301,7 +301,7 @@ class GraphPaperView(goocanvas.Canvas):
         '''
         w, h = ctx.get_target().get_width(), ctx.get_target().get_height()
         #print x1, y1, x2, y2
-        #print canvas.get_bounds()
+        #print self.get_bounds()
         #ctx.get_target().write_to_png("blah.png")
         left, top = self.convert_from_pixels(x1, y1)
         right, bottom = self.convert_from_pixels(x1+x2, y1+y2)
