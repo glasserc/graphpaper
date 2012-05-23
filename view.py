@@ -274,7 +274,7 @@ class GraphPaperView(goocanvas.Canvas):
     def bound_rect(self, groupitem, **kwargs):
         '''Creates a rect object that covers all the area a property does.'''
         b = goocanvas.Bounds()
-        groupitem.get_bounds(b)
+        b = groupitem.get_bounds()
         #print "bounds:", b.x1, b.y1, b.x2, b.y2
         width = b.x2 - b.x1
         height = b.y2 - b.y1
