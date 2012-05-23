@@ -307,7 +307,7 @@ class GraphPaperView(goocanvas.Canvas):
         right, bottom = self.convert_from_pixels(x1+x2, y1+y2)
         #print left, top, right, bottom
         firstx = left-left%SPACE
-        firsty = top-top%SPACE 
+        firsty = top-top%SPACE
         #print "starting at", firstx, firsty
         floor = math.floor
         for i in range(int(firstx), int(right+SPACE), SPACE):
